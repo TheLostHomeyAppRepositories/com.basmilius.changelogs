@@ -7,7 +7,12 @@
       "description": "이 Homey에 설치된 모든 앱입니다. 앱을 탭하면 전체 변경 로그 기록을 볼 수 있습니다.",
       "empty": "설치된 앱이 없습니다.",
       "loading": "앱 불러오는 중…",
-      "no_changelog": "변경 로그를 사용할 수 없습니다."
+      "no_changelog": "변경 로그를 사용할 수 없습니다.",
+      "sort": {
+        "label": "앱 정렬",
+        "alphabetical": "가–힣",
+        "recently_updated": "최근 업데이트됨"
+      }
     },
     "changelog": {
       "current_version": "현재 버전",

@@ -7,7 +7,12 @@
       "description": "Alla appar som är installerade på denna Homey. Tryck på en app för att se dess fullständiga ändringslogghistorik.",
       "empty": "Inga appar installerade.",
       "loading": "Laddar appar…",
-      "no_changelog": "Ingen ändringslogg tillgänglig."
+      "no_changelog": "Ingen ändringslogg tillgänglig.",
+      "sort": {
+        "label": "Sortera appar",
+        "alphabetical": "A–Z",
+        "recently_updated": "Nyligen uppdaterade"
+      }
     },
     "changelog": {
       "current_version": "Nuvarande version",

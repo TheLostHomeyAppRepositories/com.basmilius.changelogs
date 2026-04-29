@@ -7,7 +7,12 @@
       "description": "Toutes les applications installées sur ce Homey. Appuyez sur une application pour voir son historique complet de changelogs.",
       "empty": "Aucune application installée.",
       "loading": "Chargement des applications…",
-      "no_changelog": "Aucun changelog disponible."
+      "no_changelog": "Aucun changelog disponible.",
+      "sort": {
+        "label": "Trier les applications",
+        "alphabetical": "A–Z",
+        "recently_updated": "Récemment mises à jour"
+      }
     },
     "changelog": {
       "current_version": "Version actuelle",

@@ -7,7 +7,12 @@
       "description": "Alle apps die op deze Homey zijn geïnstalleerd. Tik op een app om de volledige changelog-historie te bekijken.",
       "empty": "Geen apps geïnstalleerd.",
       "loading": "Apps laden…",
-      "no_changelog": "Geen changelog beschikbaar."
+      "no_changelog": "Geen changelog beschikbaar.",
+      "sort": {
+        "label": "Apps sorteren",
+        "alphabetical": "A–Z",
+        "recently_updated": "Recent bijgewerkt"
+      }
     },
     "changelog": {
       "current_version": "Huidige versie",

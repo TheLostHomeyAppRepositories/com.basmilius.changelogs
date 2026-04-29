@@ -7,7 +7,12 @@
             "description": "Every app installed on this Homey. Tap an app to view its full changelog history.",
             "empty": "No apps installed.",
             "loading": "Loading apps…",
-            "no_changelog": "No changelog available."
+            "no_changelog": "No changelog available.",
+            "sort": {
+                "label": "Sort apps",
+                "alphabetical": "A–Z",
+                "recently_updated": "Recently updated"
+            }
         },
         "changelog": {
             "current_version": "Current version",

@@ -7,7 +7,12 @@
             "description": "Alle apps installeret på denne Homey. Tryk på en app for at se den fulde historik over ændringslogs.",
             "empty": "Ingen apps installeret.",
             "loading": "Indlæser apps…",
-            "no_changelog": "Ingen ændringslog tilgængelig."
+            "no_changelog": "Ingen ændringslog tilgængelig.",
+            "sort": {
+                "label": "Sortér apps",
+                "alphabetical": "A–Z",
+                "recently_updated": "Senest opdaterede"
+            }
         },
         "changelog": {
             "current_version": "Nuværende version",

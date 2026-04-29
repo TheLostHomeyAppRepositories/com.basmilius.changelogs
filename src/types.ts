@@ -42,6 +42,7 @@ export type ChangelogPreview = {
     readonly version: string;
     readonly text: string;
     readonly date: string;
+    readonly rawDate: string;
 };
 
 /**

@@ -7,7 +7,12 @@
       "description": "Tutte le app installate su questo Homey. Tocca un'app per vedere la cronologia completa del changelog.",
       "empty": "Nessuna app installata.",
       "loading": "Caricamento app…",
-      "no_changelog": "Nessun changelog disponibile."
+      "no_changelog": "Nessun changelog disponibile.",
+      "sort": {
+        "label": "Ordina app",
+        "alphabetical": "A–Z",
+        "recently_updated": "Aggiornate di recente"
+      }
     },
     "changelog": {
       "current_version": "Versione attuale",

@@ -7,7 +7,12 @@
             "description": "Wszystkie aplikacje zainstalowane na tym Homey. Dotknij aplikacji, aby zobaczyć pełną historię dziennika zmian.",
             "empty": "Brak zainstalowanych aplikacji.",
             "loading": "Ładowanie aplikacji…",
-            "no_changelog": "Brak dostępnego dziennika zmian."
+            "no_changelog": "Brak dostępnego dziennika zmian.",
+            "sort": {
+                "label": "Sortuj aplikacje",
+                "alphabetical": "A–Z",
+                "recently_updated": "Ostatnio zaktualizowane"
+            }
         },
         "changelog": {
             "current_version": "Bieżąca wersja",

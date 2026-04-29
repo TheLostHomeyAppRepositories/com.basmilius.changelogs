@@ -14,36 +14,70 @@
             {{ t('settings.apps.empty') }}
         </div>
 
-        <div
-            v-else
-            :class="$style.list">
-            <AppItem
-                v-for="app in items"
-                :key="app.id"
-                :app="app"
-                @open="onOpen"/>
-        </div>
+        <template v-else>
+            <div :class="$style.toolbar">
+                <AppListSort v-model="sortBy"/>
+            </div>
+
+            <div :class="$style.list">
+                <AppItem
+                    v-for="app in sortedItems"
+                    :key="app.id"
+                    :app="app"
+                    @open="onOpen"/>
+            </div>
+        </template>
     </FormFieldset>
 </template>
 
 <script
     lang="ts"
     setup>
-    import { useTranslate } from '../composables';
+    import { computed } from 'vue';
+    import { useSortPreference, useTranslate } from '../composables';
     import type { InstalledAppView } from '../types';
     import AppItem from './AppItem.vue';
+    import AppListSort from './AppListSort.vue';
     import FormFieldset from './FormFieldset.vue';
 
     const emit = defineEmits<{
         open: [InstalledAppView];
     }>();
 
-    defineProps<{
+    const props = defineProps<{
         readonly isLoading: boolean;
         readonly items: InstalledAppView[];
     }>();
 
     const t = useTranslate();
+    const sortBy = useSortPreference();
+
+    const sortedItems = computed<InstalledAppView[]>(() => {
+        const copy = [...props.items];
+
+        if (sortBy.value === 'name') {
+            return copy.sort((a, b) => a.name.localeCompare(b.name, undefined, {sensitivity: 'base'}));
+        }
+
+        return copy.sort((a, b) => {
+            const dateA = a.latestChangelog?.rawDate ?? '';
+            const dateB = b.latestChangelog?.rawDate ?? '';
+
+            if (dateA === dateB) {
+                return a.name.localeCompare(b.name, undefined, {sensitivity: 'base'});
+            }
+
+            if (dateA === '') {
+                return 1;
+            }
+
+            if (dateB === '') {
+                return -1;
+            }
+
+            return dateB.localeCompare(dateA);
+        });
+    });
 
     function onOpen(app: InstalledAppView): void {
         emit('open', app);
@@ -53,6 +87,12 @@
 <style
     lang="scss"
     module>
+    .toolbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: var(--homey-su-1);
+    }
+
     .list {
         display: flex;
         flex-flow: column;

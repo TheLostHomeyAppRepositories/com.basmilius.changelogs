@@ -4,3 +4,5 @@ export type {
     ChangelogPreview,
     InstalledAppView
 } from '../../src/types';
+
+export type SortBy = 'name' | 'recent';

@@ -197,7 +197,8 @@ export default class ChangelogService extends Shortcuts<ChangelogsApp> {
         return {
             version,
             text: this.#pickChangelogText(entry.changelog),
-            date: this.#formatDate(entry.createdAt)
+            date: this.#formatDate(entry.createdAt),
+            rawDate: entry.createdAt
         };
     }
 
