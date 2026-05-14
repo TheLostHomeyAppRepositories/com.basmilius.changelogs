@@ -19,7 +19,7 @@
         "nl": "Instellingenpagina toegevoegd met een overzicht van alle geïnstalleerde apps en hun changelogs. Tik op een app om de volledige versiehistorie te bekijken."
     },
     "1.2.0": {
-        "en": "Detect when a newer version of an installed app is available on the Athom store. Apps with an update show a badge and are sorted to the top of the settings list, with a quick link to the Homey App Store. New flow trigger and an opt-in timeline notification keep you informed. Also fixes the missing changelog for some apps.",
-        "nl": "Detecteert wanneer een nieuwere versie van een geïnstalleerde app beschikbaar is in de Athom store. Apps met een update krijgen een badge en staan bovenaan in de instellingenpagina, met een snelle link naar de Homey App Store. Nieuwe flow-trigger en een optionele tijdlijnmelding houden je op de hoogte. Lost ook op dat sommige changelogs niet werden geladen."
+        "en": "Detect when a newer version of an installed app is available on the Homey App Store. Apps with an update show a badge and are sorted to the top of the settings list, with a quick link to the Homey App Store. New flow trigger and an opt-in timeline notification keep you informed. Also fixes the missing changelog for some apps.",
+        "nl": "Detecteert wanneer een nieuwere versie van een geïnstalleerde app beschikbaar is in de Homey App Store. Apps met een update krijgen een badge en staan bovenaan in de instellingenpagina, met een snelle link naar de Homey App Store. Nieuwe flow-trigger en een optionele tijdlijnmelding houden je op de hoogte. Lost ook op dat sommige changelogs niet werden geladen."
     }
 }
