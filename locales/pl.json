@@ -11,7 +11,8 @@
       "sort": {
         "label": "Sortuj aplikacje",
         "alphabetical": "A–Z",
-        "recently_updated": "Ostatnio zaktualizowane"
+        "recently_updated": "Ostatnio zaktualizowane",
+        "updates_first": "Aktualizacje najpierw"
       }
     },
     "changelog": {
@@ -19,6 +20,20 @@
       "loading": "Ładowanie dziennika zmian…",
       "empty": "Brak dostępnego dziennika zmian dla tej aplikacji.",
       "close": "Zamknij"
+    },
+    "update": {
+      "available_to": "Dostępna aktualizacja → v{{version}}",
+      "open_store": "Otwórz w Homey App Store",
+      "summary_one": "1 aplikacja ma dostępną aktualizację",
+      "summary_other": "{{count}} aplikacji ma dostępną aktualizację"
+    },
+    "preferences": {
+      "title": "Preferencje",
+      "description": "Wybierz, jak chcesz być powiadamiany o dostępnych aktualizacjach aplikacji.",
+      "notify_label": "Wyślij powiadomienie na osi czasu",
+      "notify_description": "Wyślij powiadomienie na oś czasu Homey (również jako push mobilny), gdy dostępna jest nowsza wersja zainstalowanej aplikacji.",
+      "test_label": "Uwzględnij wersje testowe",
+      "test_description": "Wykrywaj również nowsze wersje testowe oprócz stabilnych wydań."
     }
   }
 }

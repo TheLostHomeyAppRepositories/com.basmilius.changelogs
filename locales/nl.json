@@ -11,7 +11,8 @@
       "sort": {
         "label": "Apps sorteren",
         "alphabetical": "A–Z",
-        "recently_updated": "Recent bijgewerkt"
+        "recently_updated": "Recent bijgewerkt",
+        "updates_first": "Updates eerst"
       }
     },
     "changelog": {
@@ -19,6 +20,20 @@
       "loading": "Changelog laden…",
       "empty": "Geen changelog beschikbaar voor deze app.",
       "close": "Sluiten"
+    },
+    "update": {
+      "available_to": "Update beschikbaar → v{{version}}",
+      "open_store": "Openen in Homey App Store",
+      "summary_one": "1 app heeft een update beschikbaar",
+      "summary_other": "{{count}} apps hebben een update beschikbaar"
+    },
+    "preferences": {
+      "title": "Voorkeuren",
+      "description": "Kies hoe je op de hoogte wilt worden gehouden van beschikbare app-updates.",
+      "notify_label": "Stuur een tijdlijnmelding",
+      "notify_description": "Stuur een Homey-tijdlijnmelding (en mobiele push) wanneer er een nieuwere versie van een geïnstalleerde app beschikbaar is.",
+      "test_label": "Test-builds meenemen",
+      "test_description": "Detecteer ook nieuwere test-builds, naast stabiele releases."
     }
   }
 }

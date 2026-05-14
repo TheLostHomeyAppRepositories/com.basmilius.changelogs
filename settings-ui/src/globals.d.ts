@@ -1,5 +1,5 @@
 declare namespace Homey {
-    export function __(key: string): string;
+    export function __(key: string, tags?: Record<string, string>): string;
 
     export function setTitle(title: string): void;
 
@@ -35,6 +35,8 @@ declare namespace Homey {
     ): Promise<T>;
 
     export function on(event: string, callback: (...args: any[]) => void): void;
+
+    export function openURL(url: string): Promise<void>;
 }
 
 declare global {

@@ -4,6 +4,12 @@
         :subtitle="t('settings.subtitle')"/>
 
     <Form>
+        <Preferences
+            :preferences="preferences"
+            :is-loading="isLoadingPreferences"
+            :is-saving="isSavingPreferences"
+            @update="onPreferencesUpdate"/>
+
         <AppList
             :is-loading="isLoading"
             :items="items"
@@ -24,18 +30,25 @@
     lang="ts"
     setup>
     import { onMounted, ref } from 'vue';
-    import { AppList, ChangelogModal, Form, Top } from './components';
-    import { useApps, useChangelog, useTranslate } from './composables';
-    import type { InstalledAppView } from './types';
+    import { AppList, ChangelogModal, Form, Preferences, Top } from './components';
+    import { useApps, useChangelog, usePreferences, useTranslate } from './composables';
+    import type { AppPreferences, InstalledAppView } from './types';
 
     const t = useTranslate();
     const {items, isLoading, load: loadApps} = useApps();
     const {entries, isLoading: isLoadingChangelog, load: loadChangelog, reset: resetChangelog} = useChangelog();
+    const {
+        preferences,
+        isLoading: isLoadingPreferences,
+        isSaving: isSavingPreferences,
+        load: loadPreferences,
+        update: updatePreferences
+    } = usePreferences();
 
     const openedApp = ref<InstalledAppView | null>(null);
 
     onMounted(async () => {
-        await loadApps();
+        await Promise.all([loadPreferences(), loadApps()]);
         Homey.ready();
     });
 
@@ -47,6 +60,16 @@
     function onClose(): void {
         openedApp.value = null;
         resetChangelog();
+    }
+
+    async function onPreferencesUpdate(patch: Partial<AppPreferences>): Promise<void> {
+        const previous = {...preferences.value};
+
+        await updatePreferences(patch);
+
+        if (previous.includeTestBuilds !== preferences.value.includeTestBuilds) {
+            await loadApps();
+        }
     }
 </script>
 

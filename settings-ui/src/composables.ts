@@ -1,11 +1,21 @@
 import { ref, watch } from 'vue';
-import type { ChangelogFull, InstalledAppView, SortBy } from './types';
+import type { AppPreferences, ChangelogFull, InstalledAppView, SortBy } from './types';
 
 const SORT_BY_STORAGE_KEY = 'changelogs:sort-by';
-const SORT_BY_VALUES: readonly SortBy[] = ['name', 'recent'];
+const SORT_BY_VALUES: readonly SortBy[] = ['updates', 'name', 'recent'];
 
 export function useTranslate() {
-    return (key: string) => Homey.__(key) ?? key;
+    return (key: string, tags?: Record<string, string>) => {
+        let result = (tags ? Homey.__(key, tags) : Homey.__(key)) ?? key;
+
+        if (tags) {
+            for (const [tagKey, tagValue] of Object.entries(tags)) {
+                result = result.replaceAll(`{{${tagKey}}}`, tagValue);
+            }
+        }
+
+        return result;
+    };
 }
 
 export function useApps() {
@@ -52,7 +62,44 @@ export function useChangelog() {
     };
 }
 
-export function useSortPreference(defaultValue: SortBy = 'recent') {
+export function usePreferences() {
+    const preferences = ref<AppPreferences>({
+        notifyOnUpdateAvailable: true,
+        includeTestBuilds: false
+    });
+    const isLoading = ref(true);
+    const isSaving = ref(false);
+
+    const load = async () => {
+        isLoading.value = true;
+
+        try {
+            preferences.value = await Homey.api<AppPreferences>('GET', '/preferences');
+        } finally {
+            isLoading.value = false;
+        }
+    };
+
+    const update = async (patch: Partial<AppPreferences>) => {
+        isSaving.value = true;
+
+        try {
+            preferences.value = await Homey.api<AppPreferences>('PUT', '/preferences', patch);
+        } finally {
+            isSaving.value = false;
+        }
+    };
+
+    return {
+        preferences,
+        isLoading,
+        isSaving,
+        load,
+        update
+    };
+}
+
+export function useSortPreference(defaultValue: SortBy = 'updates') {
     const sortBy = ref<SortBy>(readSortBy(defaultValue));
 
     watch(sortBy, (value) => {

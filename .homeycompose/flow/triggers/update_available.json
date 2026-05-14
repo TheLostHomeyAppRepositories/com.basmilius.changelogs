@@ -1,0 +1,164 @@
+{
+    "id": "update_available",
+    "title": {
+        "ar": "تحديث متاح لتطبيق",
+        "da": "En opdatering er tilgængelig for en app",
+        "de": "Ein Update ist für eine App verfügbar",
+        "en": "An update is available for an app",
+        "es": "Hay una actualización disponible para una aplicación",
+        "fr": "Une mise à jour est disponible pour une application",
+        "it": "È disponibile un aggiornamento per un'app",
+        "ko": "앱에 사용 가능한 업데이트가 있습니다",
+        "nl": "Een update is beschikbaar voor een app",
+        "no": "En oppdatering er tilgjengelig for en app",
+        "pl": "Dostępna jest aktualizacja aplikacji",
+        "ru": "Доступно обновление для приложения",
+        "sv": "En uppdatering är tillgänglig för en app"
+    },
+    "titleFormatted": {
+        "ar": "تحديث متاح لتطبيق مثبت",
+        "da": "En opdatering er tilgængelig for en installeret app",
+        "de": "Ein Update ist für eine installierte App verfügbar",
+        "en": "An update is available for an installed app",
+        "es": "Hay una actualización disponible para una aplicación instalada",
+        "fr": "Une mise à jour est disponible pour une application installée",
+        "it": "È disponibile un aggiornamento per un'app installata",
+        "ko": "설치된 앱에 사용 가능한 업데이트가 있습니다",
+        "nl": "Er is een update beschikbaar voor een geïnstalleerde app",
+        "no": "En oppdatering er tilgjengelig for en installert app",
+        "pl": "Dostępna jest aktualizacja zainstalowanej aplikacji",
+        "ru": "Доступно обновление для установленного приложения",
+        "sv": "En uppdatering är tillgänglig för en installerad app"
+    },
+    "hint": {
+        "ar": "يتم التشغيل عند توفر إصدار أحدث من تطبيق Homey مثبت في متجر Athom.",
+        "da": "Udløses når en nyere version af en installeret Homey-app er tilgængelig i Athom-butikken.",
+        "de": "Wird ausgelöst, wenn eine neuere Version einer installierten Homey-App im Athom-Store verfügbar ist.",
+        "en": "Fires when a newer version of an installed Homey app is available on the Athom store.",
+        "es": "Se activa cuando hay una versión más reciente de una aplicación Homey instalada disponible en la tienda de Athom.",
+        "fr": "Se déclenche lorsqu'une version plus récente d'une application Homey installée est disponible sur le store Athom.",
+        "it": "Si attiva quando è disponibile una versione più recente di un'app Homey installata nello store Athom.",
+        "ko": "설치된 Homey 앱의 최신 버전이 Athom 스토어에서 제공될 때 실행됩니다.",
+        "nl": "Vuurt af wanneer er een nieuwere versie van een geïnstalleerde Homey-app beschikbaar is in de Athom store.",
+        "no": "Utløses når en nyere versjon av en installert Homey-app er tilgjengelig i Athom-butikken.",
+        "pl": "Uruchamia się, gdy nowsza wersja zainstalowanej aplikacji Homey jest dostępna w sklepie Athom.",
+        "ru": "Срабатывает, когда более новая версия установленного приложения Homey становится доступной в магазине Athom.",
+        "sv": "Utlöses när en nyare version av en installerad Homey-app är tillgänglig i Athom-butiken."
+    },
+    "tokens": [
+        {
+            "name": "app_name",
+            "type": "string",
+            "title": {
+                "ar": "اسم التطبيق",
+                "da": "App-navn",
+                "de": "App-Name",
+                "en": "App name",
+                "es": "Nombre de la aplicación",
+                "fr": "Nom de l'application",
+                "it": "Nome dell'app",
+                "ko": "앱 이름",
+                "nl": "App-naam",
+                "no": "App-navn",
+                "pl": "Nazwa aplikacji",
+                "ru": "Название приложения",
+                "sv": "Appnamn"
+            }
+        },
+        {
+            "name": "app_id",
+            "type": "string",
+            "title": {
+                "ar": "معرف التطبيق",
+                "da": "App-ID",
+                "de": "App-ID",
+                "en": "App ID",
+                "es": "ID de la aplicación",
+                "fr": "ID de l'application",
+                "it": "ID dell'app",
+                "ko": "앱 ID",
+                "nl": "App-ID",
+                "no": "App-ID",
+                "pl": "ID aplikacji",
+                "ru": "ID приложения",
+                "sv": "App-ID"
+            }
+        },
+        {
+            "name": "current_version",
+            "type": "string",
+            "title": {
+                "ar": "الإصدار الحالي",
+                "da": "Nuværende version",
+                "de": "Aktuelle Version",
+                "en": "Current version",
+                "es": "Versión actual",
+                "fr": "Version actuelle",
+                "it": "Versione attuale",
+                "ko": "현재 버전",
+                "nl": "Huidige versie",
+                "no": "Nåværende versjon",
+                "pl": "Bieżąca wersja",
+                "ru": "Текущая версия",
+                "sv": "Nuvarande version"
+            }
+        },
+        {
+            "name": "latest_version",
+            "type": "string",
+            "title": {
+                "ar": "أحدث إصدار",
+                "da": "Seneste version",
+                "de": "Neueste Version",
+                "en": "Latest version",
+                "es": "Última versión",
+                "fr": "Dernière version",
+                "it": "Ultima versione",
+                "ko": "최신 버전",
+                "nl": "Nieuwste versie",
+                "no": "Siste versjon",
+                "pl": "Najnowsza wersja",
+                "ru": "Последняя версия",
+                "sv": "Senaste version"
+            }
+        },
+        {
+            "name": "changelog",
+            "type": "string",
+            "title": {
+                "ar": "سجل التغييرات",
+                "da": "Changelog",
+                "de": "Changelog",
+                "en": "Changelog",
+                "es": "Registro de cambios",
+                "fr": "Changelog",
+                "it": "Changelog",
+                "ko": "변경 로그",
+                "nl": "Changelog",
+                "no": "Endringslogg",
+                "pl": "Dziennik zmian",
+                "ru": "Журнал изменений",
+                "sv": "Ändringslogg"
+            }
+        },
+        {
+            "name": "date",
+            "type": "string",
+            "title": {
+                "ar": "تاريخ الإصدار",
+                "da": "Udgivelsesdato",
+                "de": "Veröffentlichungsdatum",
+                "en": "Release date",
+                "es": "Fecha de lanzamiento",
+                "fr": "Date de publication",
+                "it": "Data di rilascio",
+                "ko": "출시일",
+                "nl": "Releasedatum",
+                "no": "Utgivelsesdato",
+                "pl": "Data wydania",
+                "ru": "Дата выпуска",
+                "sv": "Utgivningsdatum"
+            }
+        }
+    ]
+}

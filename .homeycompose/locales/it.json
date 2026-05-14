@@ -11,7 +11,8 @@
             "sort": {
                 "label": "Ordina app",
                 "alphabetical": "A–Z",
-                "recently_updated": "Aggiornate di recente"
+                "recently_updated": "Aggiornate di recente",
+                "updates_first": "Aggiornamenti per primi"
             }
         },
         "changelog": {
@@ -19,6 +20,20 @@
             "loading": "Caricamento changelog…",
             "empty": "Nessun changelog disponibile per questa app.",
             "close": "Chiudi"
+        },
+        "update": {
+            "available_to": "Aggiornamento disponibile → v{{version}}",
+            "open_store": "Apri nell'Homey App Store",
+            "summary_one": "1 app ha un aggiornamento disponibile",
+            "summary_other": "{{count}} app hanno un aggiornamento disponibile"
+        },
+        "preferences": {
+            "title": "Preferenze",
+            "description": "Scegli come vuoi essere informato degli aggiornamenti disponibili.",
+            "notify_label": "Invia una notifica nella timeline",
+            "notify_description": "Invia una notifica nella timeline di Homey (anche come push mobile) quando è disponibile una versione più recente di un'app installata.",
+            "test_label": "Includi build di test",
+            "test_description": "Rileva anche le nuove build di test, oltre alle versioni stabili."
         }
     }
 }

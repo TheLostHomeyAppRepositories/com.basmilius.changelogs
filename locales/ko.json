@@ -11,7 +11,8 @@
       "sort": {
         "label": "앱 정렬",
         "alphabetical": "가–힣",
-        "recently_updated": "최근 업데이트됨"
+        "recently_updated": "최근 업데이트됨",
+        "updates_first": "업데이트 우선"
       }
     },
     "changelog": {
@@ -19,6 +20,20 @@
       "loading": "변경 로그 불러오는 중…",
       "empty": "이 앱에 사용할 수 있는 변경 로그가 없습니다.",
       "close": "닫기"
+    },
+    "update": {
+      "available_to": "업데이트 사용 가능 → v{{version}}",
+      "open_store": "Homey App Store에서 열기",
+      "summary_one": "1개 앱에 업데이트가 있습니다",
+      "summary_other": "{{count}}개 앱에 업데이트가 있습니다"
+    },
+    "preferences": {
+      "title": "환경설정",
+      "description": "사용 가능한 앱 업데이트에 대해 알림을 받을 방법을 선택하세요.",
+      "notify_label": "타임라인 알림 보내기",
+      "notify_description": "설치된 앱의 새 버전이 있을 때 Homey 타임라인 알림(모바일 푸시 포함)을 보냅니다.",
+      "test_label": "테스트 빌드 포함",
+      "test_description": "안정 릴리스 외에 새 테스트 빌드도 감지합니다."
     }
   }
 }

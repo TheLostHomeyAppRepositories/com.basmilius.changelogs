@@ -11,7 +11,8 @@
       "sort": {
         "label": "Sorter apper",
         "alphabetical": "A–Z",
-        "recently_updated": "Nylig oppdatert"
+        "recently_updated": "Nylig oppdatert",
+        "updates_first": "Oppdateringer først"
       }
     },
     "changelog": {
@@ -19,6 +20,20 @@
       "loading": "Laster endringslogg…",
       "empty": "Ingen endringslogg tilgjengelig for denne appen.",
       "close": "Lukk"
+    },
+    "update": {
+      "available_to": "Oppdatering tilgjengelig → v{{version}}",
+      "open_store": "Åpne i Homey App Store",
+      "summary_one": "1 app har en oppdatering tilgjengelig",
+      "summary_other": "{{count}} apper har en oppdatering tilgjengelig"
+    },
+    "preferences": {
+      "title": "Innstillinger",
+      "description": "Velg hvordan du vil bli varslet om tilgjengelige app-oppdateringer.",
+      "notify_label": "Send et tidslinje-varsel",
+      "notify_description": "Send et varsel til Homeys tidslinje (også som mobil push) når en nyere versjon av en installert app er tilgjengelig.",
+      "test_label": "Inkluder test-versjoner",
+      "test_description": "Oppdag også nyere test-versjoner i tillegg til stabile utgivelser."
     }
   }
 }

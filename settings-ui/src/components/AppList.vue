@@ -16,6 +16,14 @@
 
         <template v-else>
             <div :class="$style.toolbar">
+                <span
+                    v-if="updateCount > 0"
+                    :class="$style.toolbarSummary">
+                    {{ updateCount === 1
+                        ? t('settings.update.summary_one')
+                        : t('settings.update.summary_other', {count: String(updateCount)}) }}
+                </span>
+
                 <AppListSort v-model="sortBy"/>
             </div>
 
@@ -52,11 +60,23 @@
     const t = useTranslate();
     const sortBy = useSortPreference();
 
+    const updateCount = computed(() => props.items.filter((app) => app.hasUpdate).length);
+
     const sortedItems = computed<InstalledAppView[]>(() => {
         const copy = [...props.items];
 
         if (sortBy.value === 'name') {
             return copy.sort((a, b) => a.name.localeCompare(b.name, undefined, {sensitivity: 'base'}));
+        }
+
+        if (sortBy.value === 'updates') {
+            return copy.sort((a, b) => {
+                if (a.hasUpdate !== b.hasUpdate) {
+                    return a.hasUpdate ? -1 : 1;
+                }
+
+                return a.name.localeCompare(b.name, undefined, {sensitivity: 'base'});
+            });
         }
 
         return copy.sort((a, b) => {
@@ -89,8 +109,16 @@
     module>
     .toolbar {
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--homey-su-1);
         margin-bottom: var(--homey-su-1);
+        flex-wrap: wrap;
+    }
+
+    .toolbarSummary {
+        color: var(--homey-color-mono-60);
+        font-size: var(--homey-font-size-small);
     }
 
     .list {

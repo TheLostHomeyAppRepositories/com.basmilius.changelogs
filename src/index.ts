@@ -63,5 +63,6 @@ export default class ChangelogsApp extends App<ChangelogsApp> {
 
     #registerTriggers(): void {
         this.registry.trigger(Triggers.AppUpdated);
+        this.registry.trigger(Triggers.UpdateAvailable);
     }
 }

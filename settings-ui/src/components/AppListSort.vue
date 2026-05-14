@@ -33,6 +33,7 @@
     const t = useTranslate();
 
     const options: ReadonlyArray<{readonly value: SortBy; readonly labelKey: string}> = [
+        {value: 'updates', labelKey: 'settings.apps.sort.updates_first'},
         {value: 'name', labelKey: 'settings.apps.sort.alphabetical'},
         {value: 'recent', labelKey: 'settings.apps.sort.recently_updated'}
     ];
